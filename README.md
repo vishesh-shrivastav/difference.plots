@@ -1,2 +1,2 @@
 # difference.plots
-R package to create difference plots like Mountain Plots.
+R package for plotting difference in measurements plots like Mountain plot, Bland Altman plot and others
