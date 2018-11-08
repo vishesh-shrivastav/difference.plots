@@ -5,7 +5,7 @@
 #' be used or not for plotting.
 #' @param x First input numeric vector
 #' @param y Second input numeric vector
-#' @param plot.type The plot type to use. Defaults to none. Options include 'plotly'.
+#' @param plot.type Optional argument. The plot type to use. Plots using base R graphics if not specified. Options include 'plotly'.
 #' @return A plot object
 #' @export
 mountain_plot <- function(x, y, plot.type){
