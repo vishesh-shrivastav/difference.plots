@@ -25,8 +25,8 @@ difference_plot <- function(measurand, reference, plot.type){
     stop("Vectors should be of the same length.")
   }
   
-  # Populate difference vectoe
-  abs.diff <- abs(measurand - reference)/reference
+  # Populate difference vector
+  abs.diff <- (measurand - reference)/reference
 
   # Create plot
   # If plot type not specified, use base R graphics
