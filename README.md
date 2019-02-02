@@ -1,6 +1,6 @@
 # difference.plots
 
-**About**
+**About**  
 `difference.plots` is a R package for plotting common difference in measurement plots like Mountain plot, Bland Altman plot and others.  
 
 **Installation**  
