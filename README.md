@@ -6,11 +6,11 @@
 **Installation**  
 `difference.plots` can be installed via Github:
 
-`
+```{r}
 if (!require(devtools)) {  
     install.packages('devtools')  
 }  
 devtools::install_github('vishesh-shrivastav/difference.plots')
-`  
+```
 
 **Plots**
