@@ -1,2 +1,16 @@
 # difference.plots
-R package for plotting difference in measurements plots like Mountain plot, Bland Altman plot and others
+
+**About**  
+`difference.plots` is a R package for plotting common difference in measurement plots like Mountain plot, Bland Altman plot and others.  
+
+**Installation**  
+`difference.plots` can be installed via Github:
+
+```{r}
+if (!require(devtools)) {  
+    install.packages('devtools')  
+}  
+devtools::install_github('vishesh-shrivastav/difference.plots')
+```
+
+**Plots**
