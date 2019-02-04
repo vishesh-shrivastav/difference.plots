@@ -13,7 +13,7 @@ if (!require(devtools)) {
 devtools::install_github('vishesh-shrivastav/difference.plots')
 ```
 
-**Plots**  
+**Plot Examples**  
 
 **Mountain Plot**  
 ```{r}
@@ -22,4 +22,11 @@ r <- runif(20, 0, 1)
 mountain_plot(m, r, "plotly")
 ```  
 
-![mountain-plot-1](https://raw.githubusercontent.com/vishesh-shrivastav/difference.plots/master/docs/mountain_1.png)
+![mountain-plot-1](https://raw.githubusercontent.com/vishesh-shrivastav/difference.plots/master/docs/mountain_1.png)  
+
+**Bland Altman Plot**
+```{r}
+bland_altman(m, r, "plotly")
+```
+
+![bland-altman-1](https://raw.githubusercontent.com/vishesh-shrivastav/difference.plots/master/docs/ba_01.png)
