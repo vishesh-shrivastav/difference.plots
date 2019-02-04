@@ -13,4 +13,13 @@ if (!require(devtools)) {
 devtools::install_github('vishesh-shrivastav/difference.plots')
 ```
 
-**Plots**
+**Plots**  
+
+**Mountain Plot**  
+```{r}
+m <- runif(20, 0, 1)
+r <- runif(20, 0, 1)
+mountain_plot(m, r, "plotly")
+```  
+
+![mountain-plot-1](https://raw.githubusercontent.com/vishesh-shrivastav/difference.plots/master/docs/mountain_1.png)
