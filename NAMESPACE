@@ -3,4 +3,3 @@
 export(mountain_plot)
 export(difference_plot)
 export(bland_altman)
-importFrom(magrittr,"%>%")
