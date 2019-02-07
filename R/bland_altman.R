@@ -45,31 +45,57 @@ bland_altman <- function(x, y, plot.type){
   }
   # Else use input plot type
   else if(plot.type == "plotly"){
-    p <- plotly::plot_ly(x = means, y = diffs, type = 'scatter', mode = 'markers') %>%
-      plotly::layout(title = 'Bland Altman Plot',
+    p <- plotly::plot_ly(x = means, y = diffs, type = 'scatter', mode = 'markers') #%>%
+    
+    p <- plotly::layout(p, title = 'Bland Altman Plot',
                      xaxis = list(title = "Means", showgrid = TRUE, zeroline = FALSE),
                      yaxis = list(title = "Differences", showgrid = TRUE, zeroline = FALSE),
-    shapes = (list(
-              # Add Line for mean of differences
-              list(type = 'line', xref = 'paper',
-                   x0 = 0, x1 = 1,
-                   y0 = mean.of.differences,
-                   y1 = mean.of.differences,
-                   line = list(width=1)),
-              # Dotted line for upper CI
-              list(type = 'line', xref = 'paper',
-                   x0 = 0, x1 = 1,
-                   y0 = mean.of.differences + 2 * sd.of.differences,
-                   y1 = mean.of.differences + 2 * sd.of.differences,
-                   line = list(width = 1, dash = 'dash')),
-              # Dotted line for lower CI
-              list(type = 'line', xref = 'paper',
-                   x0 = 0, x1 = 1,
-                   y0 = mean.of.differences - 2 * sd.of.differences,
-                   y1 = mean.of.differences - 2 * sd.of.differences,
-                   line = list(width = 1, dash = 'dash'))
-            ))
-      )
+                     shapes = (list(
+                       # Add Line for mean of differences
+                       list(type = 'line', xref = 'paper',
+                            x0 = 0, x1 = 1,
+                            y0 = mean.of.differences,
+                            y1 = mean.of.differences,
+                            line = list(width=1)),
+                       # Dotted line for upper CI
+                       list(type = 'line', xref = 'paper',
+                            x0 = 0, x1 = 1,
+                            y0 = mean.of.differences + 2 * sd.of.differences,
+                            y1 = mean.of.differences + 2 * sd.of.differences,
+                            line = list(width = 1, dash = 'dash')),
+                       # Dotted line for lower CI
+                       list(type = 'line', xref = 'paper',
+                            x0 = 0, x1 = 1,
+                            y0 = mean.of.differences - 2 * sd.of.differences,
+                            y1 = mean.of.differences - 2 * sd.of.differences,
+                            line = list(width = 1, dash = 'dash'))
+                     ))
+      )      
+    
+    #   plotly::layout(title = 'Bland Altman Plot',
+    #                  xaxis = list(title = "Means", showgrid = TRUE, zeroline = FALSE),
+    #                  yaxis = list(title = "Differences", showgrid = TRUE, zeroline = FALSE),
+    # shapes = (list(
+    #           # Add Line for mean of differences
+    #           list(type = 'line', xref = 'paper',
+    #                x0 = 0, x1 = 1,
+    #                y0 = mean.of.differences,
+    #                y1 = mean.of.differences,
+    #                line = list(width=1)),
+    #           # Dotted line for upper CI
+    #           list(type = 'line', xref = 'paper',
+    #                x0 = 0, x1 = 1,
+    #                y0 = mean.of.differences + 2 * sd.of.differences,
+    #                y1 = mean.of.differences + 2 * sd.of.differences,
+    #                line = list(width = 1, dash = 'dash')),
+    #           # Dotted line for lower CI
+    #           list(type = 'line', xref = 'paper',
+    #                x0 = 0, x1 = 1,
+    #                y0 = mean.of.differences - 2 * sd.of.differences,
+    #                y1 = mean.of.differences - 2 * sd.of.differences,
+    #                line = list(width = 1, dash = 'dash'))
+    #         ))
+    #   )
   }
   # Else stop and raise error
   else{
