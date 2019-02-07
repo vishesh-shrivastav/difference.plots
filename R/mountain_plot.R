@@ -55,8 +55,9 @@ mountain_plot <- function(x, y, plot.type){
   }
   # Else use input plot type
   else if(plot.type == "plotly"){
-    p <- plotly::plot_ly(x = sorted.diffs, y = adjusted.cdfs, type = 'scatter', mode = 'lines+markers') %>%
-      plotly::layout(title = 'Mountain Plot',
+    p <- plotly::plot_ly(x = sorted.diffs, y = adjusted.cdfs, type = 'scatter', mode = 'lines+markers')
+    
+    p <- plotly::layout(p, title = 'Mountain Plot',
                      xaxis = list(title = "Difference", showgrid = TRUE, zeroline = FALSE),
                      yaxis = list(title = "Adjusted Cumulative Probability", showgrid = TRUE, zeroline = FALSE))
   }

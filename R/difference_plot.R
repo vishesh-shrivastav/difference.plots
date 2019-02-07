@@ -38,8 +38,8 @@ difference_plot <- function(measurand, reference, plot.type){
   }
   # Else use input plot type
   else if(plot.type == "plotly"){
-    p <- plotly::plot_ly(x = reference, y = abs.diff, type = 'scatter', mode = 'markers') %>%
-      plotly::layout(title = 'Difference Plot',
+    p <- plotly::plot_ly(x = reference, y = abs.diff, type = 'scatter', mode = 'markers')
+    p <- plotly::layout(p, title = 'Difference Plot',
              xaxis = list(title = "Reference", showgrid = TRUE, zeroline = FALSE),
              yaxis = list(title = "(Measurand - Reference) / Reference", showgrid = TRUE, zeroline = FALSE))
   }
